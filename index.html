@@ -1,26 +1,56 @@
-<html>
+<Html>
 <head></head>
 <body>
-<p> Illustration of <b>User Defined objects</b> </p>
-<h3>Person Object </h3>
-<p id="Persondemo"></p>
+<p>The use of Native objects <b> Numbers String Math Date</b> </p>
+<hr>
+<h3> Number </h3>
+<p>Numbers can be written with or without decimals:</p>
+<p id="demo"></p>
 
-<h3> Car Object </h3>
-<p id="CarDemo"></p>
+<hr>
+<h3> Maths </h3>
+<p>Math.PI returns PI:</p>
+<p id="piDemo"></p>
 
-<script> 
-var person = {firstName:"Steve", lastName:"Williamson", age:30, eyeColor:"grey"};
+<p> Math.min() returns the number with lowest value </p>
+<p> Click the button below to check the minimum of the 23 and 12 usning Math.min() </p>
+<button onclick = "functionMin()" > Minimum </button>
+<p id="minDemo"><p>
 
-// Display some data from the object:
-document.getElementById("Persondemo").innerHTML =
-person.firstName + " is " + person.age + " years old. His eye color is " + person.eyeColor +".";
+<p>Math.sqrt(16) returns the square root of 16:</p> 
+<p id="sqrtDemo"></p>
+
+<hr>
+<h3> String </h3>
+<p>Strings are written inside quotes. You can use single or double quotes:</p>
+<p id="stringDemo"></p>
+
+<hr>
+<h3>Date</h3>
+<p id="demoDate"></p>
 
 
-var car = {type:"Fiat", model:"500", color:"white"};
+<script>
+var x = 3.14;
+var y = 3;
+document.getElementById("demo").innerHTML = x + "<br>" + y;
 
-// Display some data from the object:
-document.getElementById("CarDemo").innerHTML = "The car type is " + car.type + " The car model is " + car.model;
+var x = Math.PI;
+var y = Math.sqrt(16);
+function functionMin() {
+  document.getElementById("minDemo").innerHTML = Math.min(5, 10);
+}
+document.getElementById("piDemo").innerHTML = x;
+document.getElementById("sqrtDemo").innerHTML = y;
+
+var name1 = "Jasmine";  // Double quotes
+var Name2 = 'Sharma';  // Single quotes
+
+document.getElementById("stringDemo").innerHTML =
+name1 + " " + Name2; 
+
+var d = new Date();
+document.getElementById("demoDate").innerHTML = d;
 </script>
 </body>
-
 </html>
