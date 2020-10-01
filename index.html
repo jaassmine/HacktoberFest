@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+<p> Illustration of <b>User Defined objects</b> </p>
+<h3>Person Object </h3>
+<p id="Persondemo"></p>
+
+<h3> Car Object </h3>
+<p id="CarDemo"></p>
+
+<script> 
+var person = {firstName:"Steve", lastName:"Williamson", age:30, eyeColor:"grey"};
+
+// Display some data from the object:
+document.getElementById("Persondemo").innerHTML =
+person.firstName + " is " + person.age + " years old. His eye color is " + person.eyeColor +".";
+
+
+var car = {type:"Fiat", model:"500", color:"white"};
+
+// Display some data from the object:
+document.getElementById("CarDemo").innerHTML = "The car type is " + car.type + " The car model is " + car.model;
+</script>
+</body>
+
+</html>
